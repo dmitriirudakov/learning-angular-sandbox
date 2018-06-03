@@ -1,0 +1,23 @@
+:host {
+	.static-grid {
+		display: table;
+		width: 100%;
+		max-width: 500px;
+	}
+	.static-grid-row {
+		display: table-row;
+	}
+	.static-grid-cell {
+		display: table-cell;
+		padding: 16px;
+		border: 1px solid #eee;
+		text-align: center;
+	}
+
+	input.ng-invalid {
+		border: 1px solid red;
+	}
+	input:focus {
+		outline: none;
+	}
+}

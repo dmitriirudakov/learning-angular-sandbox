@@ -1,0 +1,23 @@
+<div class="static-grid" [formGroup]="gridFormGroup">
+	<div class="static-grid-row">
+		<div class="static-grid-cell">Name</div>
+		<div class="static-grid-cell">Count</div>
+	</div>
+	<ng-container formArrayName="rows">
+		<div class="static-grid-row" *ngFor="let row of rows.controls; let i=index"
+			 [formGroupName]="i">
+			<div class="static-grid-cell">
+				{{ row.value.name }}
+			</div>
+			<div class="static-grid-cell">
+				<input type="number" formControlName="count">
+			</div>
+		</div>
+	</ng-container>
+	<div class="static-grid-row">
+		<div class="static-grid-cell"></div>
+		<div class="static-grid-cell">
+			Total: {{ total }}
+		</div>
+	</div>
+</div>
